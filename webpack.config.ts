@@ -1,14 +1,14 @@
-import HTML from "html-webpack-plugin"
-import Mini from "terser-webpack-plugin"
+import HTMLPlugin from "html-webpack-plugin"
+import MinifyPlugin from "terser-webpack-plugin"
 
 const defaultConfig = {
-  plugins: [new HTML({ template: "public/index.html" })],
+  plugins: [new HTMLPlugin({ template: "public/index.html" })],
+  resolve: { extensions: [".js", ".jsx", ".ts", ".tsx"] },
   module: { rules: [
     { test: /\.(js|ts)x?$/, use: "babel-loader" },
     { test: /\.(png|jpg|jpeg|webp|gif)$/, type: "asset/resource" },
     { test: /\.(woff|eot|ttf|oft|svg|ico)$/, type: "asset/inline" }    
-  ]},
-  resolve: { extensions: [".js", ".jsx", ".ts", ".tsx"] }
+  ]}
 }
 
 const developmentConfig = {
@@ -27,7 +27,7 @@ const productionConfig = {
     splitChunks: { cacheGroups: { libs: {
       chunks: "all", name: "libs", test: /[\\/]node_modules[\\/]/
     }}},
-    minimize: true, minimizer: [new Mini()]
+    minimize: true, minimizer: [new MinifyPlugin()]
   }
 }
 
