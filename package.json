@@ -1,7 +1,7 @@
 {
-  "name": "cute-gameboy",
+  "name": "@guhcalm/cute-gameboy",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.tsx",
   "author": "guhcalm <guhcalm@outlook.com>",
   "license": "MIT",
   "scripts": {
