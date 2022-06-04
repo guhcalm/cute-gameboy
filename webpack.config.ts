@@ -5,9 +5,6 @@ export default (env) => ({
   mode: env.WEBPACK_SERVE ? "development" : "production",
   plugins: [new HTML({ template: "public/index.html" })],
   resolve: { extensions: [".js", ".jsx", ".ts", ".tsx"] },
-  devServer: { port: 3000, open: false, hot: true },
-  devtool: "inline-source-map",
-  entry: { main: "./src/index.tsx" },
   optimization: {
     minimize: true,
     minimizer: [new Minify()],
