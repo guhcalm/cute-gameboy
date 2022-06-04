@@ -35,6 +35,6 @@ const myConfig = {
 export default ({ WEBPACK_BUILD }) => ({
   ...myConfig.default,
   ...(WEBPACK_BUILD
-    ? myConfig.production
-    : myConfig.development)
+  ? myConfig.production
+  : myConfig.development)
 })
