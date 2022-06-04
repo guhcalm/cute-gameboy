@@ -1,13 +1,16 @@
 import HTML from "html-webpack-plugin"
-import Minify from "terser-webpack-plugin"
+import Mini from "terser-webpack-plugin"
 
-export default (env) => ({
-  mode: env.WEBPACK_SERVE ? "development" : "production",
+export default ({ WEBPACK_SERVE }) => ({
+  mode: WEBPACK_SERVE && "development",
   plugins: [new HTML({ template: "public/index.html" })],
   resolve: { extensions: [".js", ".jsx", ".ts", ".tsx"] },
+  output: {
+    assetModuleFilename: "assets/[name].[fullhash].[ext]",
+    filename: "assets/[name].[fullhash].js",
+    clean: true
+  },
   optimization: {
-    minimize: true,
-    minimizer: [new Minify()],
     splitChunks: {
       cacheGroups: {
         libs: {
@@ -16,16 +19,13 @@ export default (env) => ({
           test: /[\\/]node_modules[\\/]/
         }
       }
-    }
-  },
-  output: {
-    assetModuleFilename: "assets/[name].[fullhash].[ext]",
-    filename: "assets/[name].[fullhash].js",
-    clean: true
+    },
+    minimize: true,
+    minimizer: [new Mini()]
   },
   module: {
     rules: [
-      { test: /\.(js|ts)x?$/, use: "babel-loader", exclude: /node_modules/ },
+      { test: /\.(js|ts)x?$/, use: "babel-loader" },
       { test: /\.(png|jpg|jpeg|webp|gif)$/, type: "asset/resource" },
       { test: /\.(woff|eot|ttf|oft|svg|ico)$/, type: "asset/inline" }
     ]
