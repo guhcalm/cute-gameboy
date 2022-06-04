@@ -28,7 +28,7 @@ export default (env) => ({
   },
   module: {
     rules: [
-      { test: /\.(js|ts)x?$/, use: "babel-loader" },
+      { test: /\.(js|ts)x?$/, use: "babel-loader", exclude: /node_modules/ },
       { test: /\.(png|jpg|jpeg|webp|gif)$/, type: "asset/resource" },
       { test: /\.(woff|eot|ttf|oft|svg|ico)$/, type: "asset/inline" }
     ]
