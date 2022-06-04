@@ -3,7 +3,7 @@ const GameboyApp = () => {
 }
 
 export default GameboyApp
-/*
+
 enum StatusEnum {
   Active = "ACTIVE",
   Inactive = "INACTIVE"
@@ -91,4 +91,3 @@ interface GameboyInterface {
     system: SystemInterface
   }
 }
-*/

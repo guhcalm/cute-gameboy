@@ -99,7 +99,10 @@
       "react/jsx-filename-extension": "off",
       "import/no-unresolved": "off",
       "import/extensions": "off",
-      "import/no-extraneous-dependencies": "off"
+      "import/no-extraneous-dependencies": "off",
+      "no-unused-vars": "off",
+      "no-shadow": "off",
+      "@typescript-eslint/no-shadow": ["error"]
     }
   },
   "lint-staged": {
