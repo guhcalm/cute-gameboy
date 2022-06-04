@@ -17,8 +17,7 @@ const productionConfig = {
     minimize: true, minimizer: [new Mini()],
     splitChunks: { cacheGroups: { libs: {
       chunks: "all", name: "libs", test: /[\\/]node_modules[\\/]/
-    }}}
-  }
+  }}}}
 }
 
 const defaultConfig = {
