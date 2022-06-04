@@ -2,9 +2,9 @@ import HTMLPlugin from "html-webpack-plugin"
 import MinifyPlugin from "terser-webpack-plugin"
 
 const myConfig = {
-  profuction: {
+  production: {
     mode: "production",
-    enty: { main: "./src/index.tsx" },
+    entry: { main: "./src/index.tsx" },
     output: {
       assetModuleFilename: "assets/[name].[fullhash].[ext]",
       filename: "assets/[name].[fullhash].js", clean: true
@@ -35,6 +35,6 @@ const myConfig = {
 export default ({ WEBPACK_BUILD }) => ({
   ...myConfig.default,
   ...(WEBPACK_BUILD
-    ? myConfig.profuction
+    ? myConfig.production
     : myConfig.development)
 })
