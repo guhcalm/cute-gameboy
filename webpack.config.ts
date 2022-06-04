@@ -1,5 +1,5 @@
-import MinifyPlugin from "terser-webpack-plugin"
 import HTMLPlugin from "html-webpack-plugin"
+import MinifyPlugin from "terser-webpack-plugin"
 
 const myConfig = {
   production: {
