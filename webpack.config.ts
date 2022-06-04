@@ -2,6 +2,15 @@ import HTMLPlugin from "html-webpack-plugin"
 import MinifyPlugin from "terser-webpack-plugin"
 
 const myConfig = {
+  default: {
+    plugins: [new HTMLPlugin({ template: "public/index.html" })],
+    resolve: { extensions: [".js", ".jsx", ".ts", ".tsx"] },
+    module: { rules: [
+      { test: /\.(js|ts)x?$/, use: "babel-loader" },
+      { test: /\.(png|jpg|jpeg|webp|gif)$/, type: "asset/resource" },
+      { test: /\.(woff|eot|ttf|oft|svg|ico)$/, type: "asset/inline" }    
+    ]}
+  },
   production: {
     mode: "production",
     entry: { main: "./src/index.tsx" },
@@ -20,15 +29,6 @@ const myConfig = {
     mode: "development",
     devtool: "inline-source-map",
     devServer: { port: 3000, open: false, hot: true }
-  },
-  default: {
-    plugins: [new HTMLPlugin({ template: "public/index.html" })],
-    resolve: { extensions: [".js", ".jsx", ".ts", ".tsx"] },
-    module: { rules: [
-      { test: /\.(js|ts)x?$/, use: "babel-loader" },
-      { test: /\.(png|jpg|jpeg|webp|gif)$/, type: "asset/resource" },
-      { test: /\.(woff|eot|ttf|oft|svg|ico)$/, type: "asset/inline" }    
-    ]}
   }
 }
 
