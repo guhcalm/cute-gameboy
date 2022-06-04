@@ -30,6 +30,7 @@ const productionConfig = {
 }
 
 const defaultConfig = {
+  plugins: [new HTML({ template: "public/index.html" })],
   module: {
     rules: [
       { test: /\.(js|ts)x?$/, use: "babel-loader" },
@@ -37,7 +38,6 @@ const defaultConfig = {
       { test: /\.(woff|eot|ttf|oft|svg|ico)$/, type: "asset/inline" }
     ]
   },
-  plugins: [new HTML({ template: "public/index.html" })],
   resolve: { extensions: [".js", ".jsx", ".ts", ".tsx"] }
 }
 
