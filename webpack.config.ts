@@ -32,9 +32,9 @@ const myConfig = {
   }
 }
 
-export default ({ WEBPACK_BUILD }) => ({
+export default (env) => ({
   ...myConfig.default,
-  ...(WEBPACK_BUILD
+  ...(env.WEBPACK_BUILD
   ? myConfig.production
   : myConfig.development)
 })
