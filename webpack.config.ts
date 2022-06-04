@@ -13,7 +13,7 @@ const myConfig = {
   },
   production: {
     mode: "production",
-    entry: { main: "./src/index.tsx" },
+    entry: { main: "./src/main.tsx" },
     output: {
       assetModuleFilename: "assets/[name].[fullhash].[ext]",
       filename: "assets/[name].[fullhash].js", clean: true
