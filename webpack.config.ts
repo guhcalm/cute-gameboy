@@ -3,12 +3,12 @@ import Mini from "terser-webpack-plugin"
 
 const defaultConfig = {
   plugins: [new HTML({ template: "public/index.html" })],
-  resolve: { extensions: [".js", ".jsx", ".ts", ".tsx"] },
   module: { rules: [
     { test: /\.(js|ts)x?$/, use: "babel-loader" },
     { test: /\.(png|jpg|jpeg|webp|gif)$/, type: "asset/resource" },
     { test: /\.(woff|eot|ttf|oft|svg|ico)$/, type: "asset/inline" }    
-  ]}
+  ]},
+  resolve: { extensions: [".js", ".jsx", ".ts", ".tsx"] }
 }
 
 const developmentConfig = {
