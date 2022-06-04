@@ -24,10 +24,10 @@ const productionConfig = {
     filename: "assets/[name].[fullhash].js", clean: true
   },
   optimization: {
-    minimize: true, minimizer: [new Mini()],
     splitChunks: { cacheGroups: { libs: {
       chunks: "all", name: "libs", test: /[\\/]node_modules[\\/]/
-    }}}
+    }}},
+    minimize: true, minimizer: [new Mini()]
   }
 }
 
