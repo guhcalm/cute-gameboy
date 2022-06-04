@@ -11,34 +11,24 @@ const productionConfig = {
   mode: "production",
   output: {
     assetModuleFilename: "assets/[name].[fullhash].[ext]",
-    filename: "assets/[name].[fullhash].js",
-    clean: true
+    filename: "assets/[name].[fullhash].js", clean: true
   },
   optimization: {
-    splitChunks: {
-      cacheGroups: {
-        libs: {
-          chunks: "all",
-          name: "libs",
-          test: /[\\/]node_modules[\\/]/
-        }
-      }
-    },
-    minimize: true,
-    minimizer: [new Mini()]
+    minimize: true, minimizer: [new Mini()],
+    splitChunks: { cacheGroups: { libs: {
+      chunks: "all", name: "libs", test: /[\\/]node_modules[\\/]/
+    }}}
   }
 }
 
 const defaultConfig = {
   plugins: [new HTML({ template: "public/index.html" })],
-  module: {
-    rules: [
-      { test: /\.(js|ts)x?$/, use: "babel-loader" },
-      { test: /\.(png|jpg|jpeg|webp|gif)$/, type: "asset/resource" },
-      { test: /\.(woff|eot|ttf|oft|svg|ico)$/, type: "asset/inline" }
-    ]
-  },
-  resolve: { extensions: [".js", ".jsx", ".ts", ".tsx"] }
+  resolve: { extensions: [".js", ".jsx", ".ts", ".tsx"] },
+  module: { rules: [
+    { test: /\.(js|ts)x?$/, use: "babel-loader" },
+    { test: /\.(png|jpg|jpeg|webp|gif)$/, type: "asset/resource" },
+    { test: /\.(woff|eot|ttf|oft|svg|ico)$/, type: "asset/inline" }    
+  ]}
 }
 
 export default ({ WEBPACK_SERVE }) => ({
