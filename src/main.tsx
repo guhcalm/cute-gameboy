@@ -1,4 +1,9 @@
 import { createRoot as myRoot } from "react-dom/client"
-import GameboyApp from "./_app"
+import MyStoreProvider from "./store/provider"
+import MyApp from "./_app"
 
-myRoot(document.querySelector("#root") as HTMLElement).render(<GameboyApp />)
+myRoot(document.querySelector("#root") as HTMLElement).render(
+  <MyStoreProvider>
+    <MyApp />
+  </MyStoreProvider>
+)

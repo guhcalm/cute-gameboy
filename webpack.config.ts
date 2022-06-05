@@ -5,25 +5,35 @@ const myConfig = {
   default: {
     plugins: [new HTMLPlugin({ template: "public/index.html" })],
     resolve: { extensions: [".js", ".jsx", ".ts", ".tsx"] },
-    module: { rules: [
-      { test: /\.(js|ts)x?$/, use: "babel-loader" },
-      { test: /\.(png|jpg|jpeg|webp|gif)$/, type: "asset/resource" },
-      { test: /\.(woff|eot|ttf|oft|svg|ico)$/, type: "asset/inline" }    
-    ]}
+    module: {
+      rules: [
+        { test: /\.(js|ts)x?$/, use: "babel-loader" },
+        { test: /\.(png|jpg|jpeg|webp|gif)$/, type: "asset/resource" },
+        { test: /\.(woff|eot|ttf|oft|svg|ico)$/, type: "asset/inline" }
+      ]
+    }
   },
   production: {
     mode: "production",
     entry: { main: "./src/main.tsx" },
     output: {
       assetModuleFilename: "assets/[name].[fullhash].[ext]",
-      filename: "assets/[name].[fullhash].js", clean: true
+      filename: "assets/[name].[fullhash].js",
+      clean: true
     },
     optimization: {
-      splitChunks: { cacheGroups: { libs: {
-        chunks: "all", name: "libs", test: /[\\/]node_modules[\\/]/
-      }}},
-      minimize: true, minimizer: [new MinifyPlugin()]
-    } 
+      splitChunks: {
+        cacheGroups: {
+          libs: {
+            chunks: "all",
+            name: "libs",
+            test: /[\\/]node_modules[\\/]/
+          }
+        }
+      },
+      minimize: true,
+      minimizer: [new MinifyPlugin()]
+    }
   },
   development: {
     mode: "development",
@@ -34,7 +44,5 @@ const myConfig = {
 
 export default (env) => ({
   ...myConfig.default,
-  ...(env.WEBPACK_BUILD
-  ? myConfig.production
-  : myConfig.development)
+  ...(env.WEBPACK_BUILD ? myConfig.production : myConfig.development)
 })
