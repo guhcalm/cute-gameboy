@@ -13,6 +13,12 @@ https://guhcalm.github.io/cute-gameboy/dist
 └── src
    ├── # Main app files
    └── .domains
+      ├── keyboard
+      |  └── # Keyboard app files
+      ├── hardware
+      |  └── # Hardware app files
+      └── software
+         └── # Software app files
 ```
 
 ## License
