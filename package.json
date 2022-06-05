@@ -111,11 +111,9 @@
     "./src/**/*.{js,jsx,ts,tsx}": "eslint --fix"
   },
   "prettierIgnore": [
-    "node_modules",
-    "webpack.config.ts"
+    "node_modules"
   ],
   "eslintIgnore": [
-    "node_modules",
-    "webpack.config.ts"
+    "node_modules"
   ]
 }
