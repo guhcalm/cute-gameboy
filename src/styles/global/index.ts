@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components"
+import { ThemeInterface } from "../themes/interfaces"
 
-const myColorPalette = ({ theme }) => `
+const myColorPalette = ({ theme }: { theme: ThemeInterface }) => `
   // surface
   --surface: ${theme.palette.surface.main};
   --on-surface: ${theme.palette.surface.on};
