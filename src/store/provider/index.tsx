@@ -1,9 +1,9 @@
 import { FC, ReactNode } from "react"
 import { Provider } from "react-redux"
-import myStore from ".."
+import gameboyStore from ".."
 
-const MyStoreProvider: FC<{ children: ReactNode }> = ({ children }) => (
-  <Provider store={myStore}>{children}</Provider>
+const GameboyStoreProvider: FC<{ children: ReactNode }> = ({ children }) => (
+  <Provider store={gameboyStore}>{children}</Provider>
 )
 
-export default MyStoreProvider
+export default GameboyStoreProvider

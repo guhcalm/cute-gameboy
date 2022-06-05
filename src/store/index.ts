@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit"
 
-const myStore = configureStore({
+const gameboyStore = configureStore({
   reducer: {}
 })
 
-export default myStore
+export default gameboyStore

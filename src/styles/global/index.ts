@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 import { ThemeInterface } from "../themes/interfaces"
 
-const myColorPalette = ({ theme }: { theme: ThemeInterface }) => `
+const gameboyColorPalette = ({ theme }: { theme: ThemeInterface }) => `
   // surface
   --surface: ${theme.palette.surface.main};
   --on-surface: ${theme.palette.surface.on};
@@ -23,7 +23,7 @@ const myColorPalette = ({ theme }: { theme: ThemeInterface }) => `
   --on-primary: ${theme.palette.secondary.on};
 `
 
-const MyGlobalStyles = createGlobalStyle`
+const GameboyGlobalStyles = createGlobalStyle`
   *,
   *::before,
   *::after {
@@ -33,7 +33,7 @@ const MyGlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   :root {
-    ${myColorPalette}
+    ${gameboyColorPalette}
   }
   body,
   #root {
@@ -46,4 +46,4 @@ const MyGlobalStyles = createGlobalStyle`
   }
 `
 
-export default MyGlobalStyles
+export default GameboyGlobalStyles
