@@ -7,7 +7,7 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve",
-    "prettier": "prettier --write \"src/**/*\"",
+    "prettier": "prettier --write .",
     "lint:fix": "eslint --fix \"src/**/*\""
   },
   "repository": {
