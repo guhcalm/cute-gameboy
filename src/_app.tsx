@@ -1,9 +1,8 @@
 import { FC } from "react"
-import GameboyGlobalStyles from "./styles/global"
-import combinedThemes from "./styles/themes"
+import { Gameboy } from "./containers"
 
 const GameboyApp: FC = () => {
-  return <GameboyGlobalStyles theme={combinedThemes[0]} />
+  return <Gameboy>Hello World</Gameboy>
 }
 
 export default GameboyApp

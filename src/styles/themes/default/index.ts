@@ -1,4 +1,4 @@
-import { ThemeInterface, ThemesEnum } from "../interfaces"
+import { ThemeInterface, ThemesEnum } from "../../../interfaces"
 
 const defaultTheme: ThemeInterface = {
   name: ThemesEnum.Default,

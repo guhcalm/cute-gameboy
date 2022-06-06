@@ -1,3 +1,6 @@
+/**
+ * @Theme
+ */
 export enum ThemesEnum {
   Default = "DEFAULT"
 }

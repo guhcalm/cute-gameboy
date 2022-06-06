@@ -1,4 +1,4 @@
-import { ThemeInterface } from "./interfaces"
+import { ThemeInterface } from "../../interfaces"
 import defaultTheme from "./default"
 
 const combinedThemes: ThemeInterface[] = [defaultTheme]
