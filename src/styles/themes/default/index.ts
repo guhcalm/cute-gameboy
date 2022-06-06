@@ -1,7 +1,7 @@
 import { ThemeInterface, ThemesEnum } from "../../../interfaces"
 
 const defaultTheme: ThemeInterface = {
-  name: ThemesEnum.Default,
+  name: ThemesEnum.DEFAULT,
   palette: {
     surface: { main: "gray", on: "white" },
     background: { main: "white", on: "black" },
