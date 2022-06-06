@@ -4,14 +4,12 @@
 export enum ThemesEnum {
   Default = "DEFAULT"
 }
-
 interface ColorInterface {
   light?: string
   main: string
   dark?: string
   on: string
 }
-
 export interface ThemeInterface {
   name: ThemesEnum
   palette: {
@@ -23,45 +21,48 @@ export interface ThemeInterface {
   }
 }
 
+/**
+ * @Status
+ */
 export enum StatusEnum {
-  Active = "ACTIVE",
-  Inactive = "INACTIVE"
+  ACTIVE,
+  INACTIVE
 }
 
 /**
  * @DirectionalPad
  */
 enum DirectionalPadEnum {
-  Left = "LEFT",
-  Right = "RIGHT",
-  Up = "UP",
-  Down = "DOWN"
+  LEFT,
+  RIGHT,
+  UP,
+  DOWN
 }
 interface DirectionalPadInterface {
-  left: DirectionalPadEnum.Left
-  right: DirectionalPadEnum.Right
-  up: DirectionalPadEnum.Up
-  down: DirectionalPadEnum.Down
+  left: DirectionalPadEnum.LEFT
+  right: DirectionalPadEnum.RIGHT
+  up: DirectionalPadEnum.UP
+  down: DirectionalPadEnum.DOWN
 }
 
 /**
  * @OperationalPad
  */
 enum OperationalPadEnum {
-  Select = "SELECT",
-  Start = "START"
+  SELECT,
+  START
 }
 interface OperationalPadInterface {
-  select: OperationalPadEnum.Select
-  start: OperationalPadEnum.Start
+  select: OperationalPadEnum.SELECT
+  start: OperationalPadEnum.START
 }
 
 /**
  * @ActionPad
  */
 enum ActionPadEnum {
-  E = "E",
-  Q = "Q"
+  E,
+  Q
 }
 interface ActionPadInterface {
   e: ActionPadEnum.E
@@ -123,7 +124,7 @@ interface SystemInterface {
 }
 
 /**
- * @Gameboy_Core
+ * @Gameboy
  */
 interface GameboyInterface {
   status: StatusEnum
