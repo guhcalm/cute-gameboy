@@ -9,4 +9,3 @@ gameboyRoot(document.querySelector("#root") as HTMLElement).render(
     <GameboyApp />
   </GameboyStoreProvider>
 )
-s
