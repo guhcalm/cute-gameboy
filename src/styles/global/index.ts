@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 
-const GameboyGlobalStyles = createGlobalStyle`
+export default createGlobalStyle`
   *,
   *::before,
   *::after {
@@ -20,5 +20,3 @@ const GameboyGlobalStyles = createGlobalStyle`
     height: 100vh;
   }
 `
-
-export default GameboyGlobalStyles

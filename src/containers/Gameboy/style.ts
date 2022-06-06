@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { ThemeInterface } from "../../interfaces"
 
-const Container = styled.main`
+export default styled.main`
   ${({ theme }: { theme: ThemeInterface }) => `
   // surface
   --surface: ${theme.palette.surface.main};
@@ -28,5 +28,3 @@ const Container = styled.main`
   max-width: 100vw;
   max-height: 100vh;
 `
-
-export default Container

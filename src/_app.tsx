@@ -1,8 +1,5 @@
-import { FC } from "react"
 import { Gameboy } from "./containers"
 
-const GameboyApp: FC = () => {
+export default () => {
   return <Gameboy>Hello World</Gameboy>
 }
-
-export default GameboyApp

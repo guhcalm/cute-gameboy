@@ -1,9 +1,7 @@
-import { FC, ReactNode } from "react"
-import combinedThemes from "../../styles/themes"
+import { ReactNode } from "react"
+import * as Themes from "../../styles/themes"
 import Container from "./style"
 
-const Gameboy: FC<{ children: ReactNode }> = ({ children }) => (
-  <Container theme={combinedThemes[0]}>{children}</Container>
+export default ({ children }: { children: ReactNode }) => (
+  <Container theme={Themes.Default}>{children}</Container>
 )
-
-export default Gameboy

@@ -1,6 +1,6 @@
 import { ThemeInterface, ThemesEnum } from "../../../interfaces"
 
-const defaultTheme: ThemeInterface = {
+export default {
   name: ThemesEnum.DEFAULT,
   palette: {
     surface: { main: "gray", on: "white" },
@@ -9,6 +9,4 @@ const defaultTheme: ThemeInterface = {
     primary: { light: "yellow", main: "orange", dark: "red", on: "black" },
     secondary: { light: "cyan", main: "green", dark: "blue", on: "black" }
   }
-}
-
-export default defaultTheme
+} as ThemeInterface
