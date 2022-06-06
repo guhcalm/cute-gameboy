@@ -1,7 +1,7 @@
-import { ThemeInterface, ThemesEnum } from "../../../interfaces"
+import { ThemesInterfaces } from "../../../interfaces"
 
 export default {
-  name: ThemesEnum.DEFAULT,
+  name: ThemesInterfaces.ThemesEnum.DEFAULT,
   palette: {
     surface: { main: "gray", on: "white" },
     background: { main: "white", on: "black" },
@@ -9,4 +9,4 @@ export default {
     primary: { light: "yellow", main: "orange", dark: "red", on: "black" },
     secondary: { light: "cyan", main: "green", dark: "blue", on: "black" }
   }
-} as ThemeInterface
+} as ThemesInterfaces.ThemeInterface

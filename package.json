@@ -7,7 +7,7 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve",
-    "prettier": "prettier --write .",
+    "prettier": "prettier --write \"src/**/*\"",
     "lint:fix": "eslint --fix \"src/**/*\""
   },
   "repository": {
@@ -106,6 +106,7 @@
       "no-unused-vars": "off",
       "no-shadow": "off",
       "import/prefer-default-export": "off",
+      "no-param-reassign": "off",
       "@typescript-eslint/no-shadow": [
         "error"
       ]
@@ -113,13 +114,5 @@
   },
   "lint-staged": {
     "./src/**/*.{js,jsx,ts,tsx}": "eslint --fix"
-  },
-  "prettierIgnore": [
-    "dist",
-    "node_modules"
-  ],
-  "eslintIgnore": [
-    "dist",
-    "node_modules"
-  ]
+  }
 }

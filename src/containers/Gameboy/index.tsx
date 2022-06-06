@@ -1,7 +1,7 @@
 import { ReactNode } from "react"
-import { Themes } from "../../styles"
+import { ThemesStyles } from "../../styles"
 import Container from "./style"
 
 export default ({ children }: { children: ReactNode }) => (
-  <Container theme={Themes.Default}>{children}</Container>
+  <Container theme={ThemesStyles.Default}>{children}</Container>
 )

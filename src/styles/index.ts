@@ -1,2 +1,2 @@
 export { default as GameboyGlobalStyles } from "./global"
-export * as Themes from "./themes"
+export * as ThemesStyles from "./themes"
