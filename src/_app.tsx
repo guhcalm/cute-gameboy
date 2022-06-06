@@ -1,5 +1,7 @@
 import { Gameboy } from "./containers"
 
-export default () => {
+const GameboyApp = () => {
   return <Gameboy>Hello World</Gameboy>
 }
+
+export default GameboyApp

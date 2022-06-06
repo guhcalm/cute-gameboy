@@ -1,5 +1,5 @@
 import { ReactNode } from "react"
-import * as Themes from "../../styles/themes"
+import { Themes } from "../../styles"
 import Container from "./style"
 
 export default ({ children }: { children: ReactNode }) => (
