@@ -7,7 +7,7 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve",
-    "prettier": "prettier --write \"src/**/*\"",
+    "prettier": "prettier --write .",
     "lint:fix": "eslint --fix \"src/**/*\""
   },
   "dependencies": {
@@ -112,9 +112,11 @@
     "./src/**/*.{js,jsx,ts,tsx}": "eslint --fix"
   },
   "prettierIgnore": [
+    "dist",
     "node_modules"
   ],
   "eslintIgnore": [
+    "dist",
     "node_modules"
   ]
 }
