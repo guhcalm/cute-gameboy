@@ -5,6 +5,7 @@ const myConfig = {
   default: {
     plugins: [new HTMLPlugin({ template: "public/index.html" })],
     resolve: { extensions: [".js", ".jsx", ".ts", ".tsx"] },
+    entry: { main: "./src/main.tsx" },
     module: {
       rules: [
         { test: /\.(js|ts)x?$/, use: "babel-loader" },
@@ -15,7 +16,6 @@ const myConfig = {
   },
   production: {
     mode: "production",
-    entry: { main: "./src/main.tsx" },
     output: {
       assetModuleFilename: "assets/[name].[fullhash].[ext]",
       filename: "assets/[name].[fullhash].js",
