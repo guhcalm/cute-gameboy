@@ -11,7 +11,7 @@ export default () => {
       <Info>
         <span>DOT MATRIX WITH STERIO SOUND</span>
       </Info>
-      <Battery className={status ? "activate" : "inactivate"}>
+      <Battery className={status === ACTIVATE ? "activate" : "inactivate"}>
         <span>Battery</span>
       </Battery>
       <Screen />
