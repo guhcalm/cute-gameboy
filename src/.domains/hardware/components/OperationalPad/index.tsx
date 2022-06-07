@@ -7,7 +7,7 @@ export default () => (
       <span>SELECT</span>
     </Button>
     <Button>
-      <button></button>
+      <button onClick={}></button>
       <span>START</span>
     </Button>
   </Container>

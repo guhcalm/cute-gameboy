@@ -1,11 +1,13 @@
 import { useSelector } from "react-redux"
+import { StatusInterfaces } from "../../../../interfaces"
 import { hardwareStatusSelector } from "../../../../store/selectors"
 import Container, { Screen, Info, Logo, Battery } from "./style"
 
 export default () => {
   const status = useSelector(hardwareStatusSelector)
+  const { ACTIVATE } =  StatusInterfaces.StatusEnum
   return (
-    <Container className={status ? "activate" : "inactivate"}>
+    <Container className={status === ACTIVATE ? "activate" : "inactivate"}>
       <Info>
         <span>DOT MATRIX WITH STERIO SOUND</span>
       </Info>

@@ -11,10 +11,12 @@ import {
   OperationalPad,
   Speaker
 } from "../../components"
+import { StatusInterfaces } from "../../../../interfaces"
 export default () => {
   const status = useSelector(hardwareStatusSelector)
+  const { ACTIVATE } =  StatusInterfaces.StatusEnum
   return (
-    <Container className={!status ? "activate" : "inactivate"}>
+    <Container className={status === ACTIVATE ? "activate" : "inactivate"}>
       <Header />
       <Main>
         <Display />

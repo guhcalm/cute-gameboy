@@ -96,6 +96,7 @@ export const Battery = styled.div`
     border-radius: 50%;
     background-color: var(--quaternary);
     position: relative;
+    z-index: 100;
   }
   span {
     display: block;
