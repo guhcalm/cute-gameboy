@@ -1,22 +1,17 @@
 import { useSelector } from "react-redux"
 import { Gameboy } from "./containers"
 import { MouseApp, KeyboardApp } from "./.domains"
-import * as hooks from "./hooks"
 import { GlobalInterfaces } from "./interfaces"
+import { useMousePosition } from "./hooks"
 
 const GameboyApp = () => {
+  // domains
   MouseApp()
   KeyboardApp()
-
-  hooks.useMousePosition()
+  // managers
+  useMousePosition()
   // useStatus()
   // useKeypad()
-
-  const state = useSelector(
-    (store: GlobalInterfaces.GlobalInterface) => store.gameboy.mouse.position
-  )
-  console.log(state)
-
   return <Gameboy>Hello World</Gameboy>
 }
 

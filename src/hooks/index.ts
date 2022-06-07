@@ -1,3 +1,3 @@
-export { default as useMousePositionManager } from "./useMousePositionManager"
-export { default as useStatusManager } from "./useStatusManager"
-export { default as useKeypadManager } from "./useKeypadManager"
+export { default as useMousePosition } from "./useMousePosition"
+export { default as useStatus } from "./useStatus"
+export { default as useKeypad } from "./useKeypad"
