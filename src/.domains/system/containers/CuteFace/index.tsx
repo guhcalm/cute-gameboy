@@ -1,9 +1,9 @@
 import Container, { Face, Mounth } from "./style"
 
 export default () => (
-    <Container>
-        <Face>
-            <Mounth />
-            </Face>
-    </Container>
+  <Container>
+    <Face>
+      <Mounth />
+    </Face>
+  </Container>
 )

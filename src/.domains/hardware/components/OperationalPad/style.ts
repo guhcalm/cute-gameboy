@@ -25,7 +25,7 @@ export const Button = styled.div`
       inset 0 0 2px 2px var(--secondary-on-light),
       inset 0px -5px 5px -5px var(--secondary-on-dark),
       inset 0px 5px 5px -5px var(--secondary-on-light),
-      1px 1px 3px rgba(0, 0, 0, 0.4);
+      1px 1px 3px rgba(0, 0, 0, 1);
     &:hover,
     &:focus,
     &:active,
@@ -34,6 +34,7 @@ export const Button = styled.div`
         inset 0 0 0 1.4px var(--secondary-on-dark),
         inset 0 0 2px 2px var(--secondary-on-light);
     }
+    cursor: pointer;
   }
 
   span {

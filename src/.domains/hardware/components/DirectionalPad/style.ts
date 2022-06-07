@@ -33,6 +33,10 @@ export default styled.div`
       top: calc(60% + 40px);
     }
   }
+
+  button {
+    cursor: pointer;
+  }
 `
 
 export const Left = styled.button`
@@ -56,7 +60,7 @@ export const Left = styled.button`
     inset 2px -2px 2px 0 var(--secondary-on-light),
     inset 0px -8px 4px -4px var(--secondary-on-dark),
     inset 0px 8px 4px -4px var(--secondary-on-light),
-    1px 1px 3px 0 rgba(0, 0, 0, 0.4);
+    1px 1px 3px 0 rgba(0, 0, 0, 1);
   &:hover,
   &:focus,
   &:active,
@@ -91,7 +95,7 @@ export const Right = styled.button`
     inset -2px -2px 2px 0 var(--secondary-on-light),
     inset 0px -8px 4px -4px var(--secondary-on-dark),
     inset 0px 8px 4px -4px var(--secondary-on-light),
-    0px 2px 2px 0 rgba(0, 0, 0, 0.4);
+    0px 1px 3px 0 rgba(0, 0, 0, 1);
   &:hover,
   &:focus,
   &:active,
@@ -124,7 +128,7 @@ export const Up = styled.button`
     inset -1.4px 1.4px 0 0 var(--secondary-on-dark),
     inset 2px 2px 2px 0 var(--secondary-on-light),
     inset -2px 2px 2px 0 var(--secondary-on-light),
-    1px 1px 3px 0 rgba(0, 0, 0, 0.4);
+    1px 1px 3px 0 rgba(0, 0, 0, 1);
   &:hover,
   &:focus,
   &:active,
@@ -158,7 +162,7 @@ export const Down = styled.button`
     inset 2px -2px 2px 0 var(--secondary-on-light),
     inset -2px -2px 2px 0 var(--secondary-on-light),
     inset 0px -32px 20px -20px var(--secondary-on-dark),
-    1px 1px 3px 0 rgba(0, 0, 0, 0.4);
+    1px 1px 3px 0 rgba(0, 0, 0, 1);
   &:hover,
   &:focus,
   &:active,

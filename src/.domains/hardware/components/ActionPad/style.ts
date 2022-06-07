@@ -22,6 +22,9 @@ export default styled.div`
       top: calc(60% + 28px);
     }
   }
+  button {
+    cursor: pointer;
+  }
 `
 
 export const Button = styled.button`
@@ -35,7 +38,7 @@ export const Button = styled.button`
     inset 0 0 2px 2px var(--quaternary-on-light),
     inset 0 -15px 8px -8px var(--quaternary-on-dark),
     inset 0 15px 8px -8px var(--quaternary-on-light),
-    1px 1px 3px rgba(0, 0, 0, 0.4);
+    1px 1px 4px rgba(0, 0, 0, 1);
   &:hover,
   &:focus,
   &:active,

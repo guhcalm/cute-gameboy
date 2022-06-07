@@ -5,9 +5,11 @@ import { System, CuteFace } from "./containers"
 
 const SystemApp = () => {
   const status = useSelector(systemStatusSelector)
-  return status === StatusInterfaces.StatusEnum.ACTIVATE 
-  ? <System />
-  : <CuteFace />
+  return status === StatusInterfaces.StatusEnum.ACTIVATE ? (
+    <System />
+  ) : (
+    <CuteFace />
+  )
 }
 
 export default SystemApp

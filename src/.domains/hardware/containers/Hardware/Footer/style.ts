@@ -3,8 +3,8 @@ import styled from "styled-components"
 export default styled.div`
   z-index: 1;
   position: absolute;
-  font-size: 7px;
-  height: 14px;
+  font-size: 8px;
+  height: 15px;
   width: 50px;
   color: var(--primary);
   background-color: var(--background);
@@ -12,7 +12,7 @@ export default styled.div`
   bottom: 6px;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 7px;
+  border-radius: 7.5px;
   display: flex;
   justify-content: center;
   align-items: center;
