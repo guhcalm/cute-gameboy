@@ -1,5 +1,5 @@
 const SystemApp = () => {
-    return <div />
+  return <div />
 }
 
 export default SystemApp

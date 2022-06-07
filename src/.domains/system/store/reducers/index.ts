@@ -1,1 +1,1 @@
-export {default as systemSlice} from "./system"
+export { default as systemSlice } from "./system"
