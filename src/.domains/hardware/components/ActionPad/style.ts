@@ -18,7 +18,7 @@ export default styled.div`
   }
   &.activate {
     top: calc(46% + 18px);
-    @media screen and (min-width: 700) {top: calc(60% + 28px);}
+    @media screen and (min-width: 700px) {top: calc(60% + 28px);}
   }
 `
 
