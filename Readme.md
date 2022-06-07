@@ -1,8 +1,6 @@
 ## Pages
 
-```
 https://guhcalm.github.io/cute-gameboy/dist
-```
 
 ## Folder Structure
 
