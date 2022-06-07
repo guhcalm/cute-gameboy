@@ -8,7 +8,7 @@ export default styled.div`
   flex-direction: column;
 
   will-change: width, height;
-  transition: 0.5s width, 0.5s height;
+  transition: 0.2s width, 0.2s height;
   &.inactivate {
     height: 490px;
     width: ${490 * 0.58}px;

@@ -31,7 +31,7 @@ export default styled.div`
   }
 
   will-change: border-radius, width, height;
-  transition: 0.5s border-radius;
+  transition: 0.2s border-radius;
   &.inactivate {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 70px;

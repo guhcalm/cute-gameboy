@@ -88,8 +88,8 @@ export const Battery = styled.div`
   justify-content: center;
   align-items: center;
   &::after {
-    will-change: width, height, box-shadow, background-color;
-    transition: box-shadow 0.8s;
+    will-change: box-shadow;
+    transition: box-shadow 0.4s;
     position: relative;
     content: "";
     display: block;
@@ -111,8 +111,7 @@ export const Battery = styled.div`
     &::after {
       width: 7px;
       height: 7px;
-      box-shadow: inset 0 0 2px var(--quaternary-on-light),
-        inset 0 0 1.5px var(--quaternary-on-dark);
+      box-shadow: none;
     }
   }
   &.activate {

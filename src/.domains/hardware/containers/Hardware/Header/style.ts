@@ -12,7 +12,7 @@ export default styled.div`
   &::before,
   &::after {
     will-change: border-radius;
-    transition: 0.5s border-radius;
+    transition: 0.2s border-radius;
     content: "";
     display: block;
     background-color: var(--primary);
