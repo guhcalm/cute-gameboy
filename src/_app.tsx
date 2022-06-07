@@ -16,8 +16,9 @@ const GameboyApp = () => {
   console.log(store, "status")
   return (
     <Gameboy>
-      <HardwareApp />
-      <SystemApp />
+      <HardwareApp>
+        <SystemApp />
+      </HardwareApp>
     </Gameboy>
   )
 }
