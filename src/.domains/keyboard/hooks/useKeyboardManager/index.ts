@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import * as onClick from "./onClick"
 
-export const useKeyboardListener = () => {
+export default () => {
   const dispatch = useDispatch()
   const handlerClick = ({ keyCode }: { keyCode: number }) =>
     onClick.clickDown(keyCode, dispatch)
