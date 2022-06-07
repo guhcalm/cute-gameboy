@@ -1,1 +1,1 @@
-export {default as useKeyboardManager} from "./useKeyboardManager"
+export { default as useKeyboardManager } from "./useKeyboardManager"

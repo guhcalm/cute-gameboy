@@ -1,1 +1,1 @@
-export {default as keyboardSlice} from "./keyboard"
+export { default as keyboardSlice } from "./keyboard"

@@ -1,7 +1,7 @@
-import {useKeyboardManager} from "./hooks"
+import { useKeyboardManager } from "./hooks"
 
 const KeyboardApp = () => {
-    useKeyboardManager()
+  useKeyboardManager()
 }
 
 export default KeyboardApp

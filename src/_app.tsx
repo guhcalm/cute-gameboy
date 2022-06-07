@@ -1,5 +1,5 @@
 import { Gameboy } from "./containers"
-import { MouseApp, KeyboardApp } from "./.domains"
+import { MouseApp, KeyboardApp, HardwareApp, SystemApp } from "./.domains"
 import { useMousePosition } from "./hooks"
 
 const GameboyApp = () => {
@@ -10,7 +10,12 @@ const GameboyApp = () => {
   useMousePosition()
   // useStatus()
   // useKeypad()
-  return <Gameboy>Hello World</Gameboy>
+  return (
+    <Gameboy>
+      <HardwareApp />
+      <SystemApp />
+    </Gameboy>
+  )
 }
 
 export default GameboyApp
