@@ -1,6 +1,6 @@
 import { Gameboy } from "./containers"
 import { MouseApp, KeyboardApp, HardwareApp, SystemApp } from "./.domains"
-import { useMousePosition } from "./hooks"
+import { useMousePosition, useStatus, useKeypad } from "./hooks"
 
 const GameboyApp = () => {
   // domains
@@ -8,8 +8,8 @@ const GameboyApp = () => {
   KeyboardApp()
   // managers
   useMousePosition()
-  // useStatus()
-  // useKeypad()
+  useStatus()
+  useKeypad()
   return (
     <Gameboy>
       <HardwareApp />

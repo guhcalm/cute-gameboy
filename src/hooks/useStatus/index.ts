@@ -1,33 +1,46 @@
+import { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
+import { StatusInterfaces } from "../../interfaces"
+import { hardwareSlice, systemSlice } from "../../.domains"
+import { gameboySlice } from "../../store/reducers"
+import {
+  gameboyStatusSelector,
+  hardwareKeypadSelector,
+  keyboardSelector,
+  systemKeypadSelector
+} from "../../store/selectors"
 
 export default () => {
   const dispatch = useDispatch()
-  const keyboard = useSelector((state) => state.domains.keyboard)
-  const keypad = useSelector((state) => state.domains.hardware.keypad)
-  const systemKeypad = useSelector((state) => state.domains.system.keypad)
-  const gameboyStatus = useSelector((state) => state.status)
+  const keyboard = useSelector(keyboardSelector)
+  // selectors
+  const hardwareKeypad = useSelector(hardwareKeypadSelector)
+  const systemKeypad = useSelector(systemKeypadSelector)
+  const gameboyStatus = useSelector(gameboyStatusSelector)
+  // actions
+  const { actions: hardwareActions } = hardwareSlice
+  const { actions: systemActions } = systemSlice
+  const { actions: gameboyActions } = gameboySlice
   // startup switcher
   useEffect(() => {
     if (
-      keyboard.startupSwitcher === StatusEnum.ACTIVATE ||
-      keypad.startupSwitcher === StatusEnum.ACTIVATE ||
-      systemKeypad.startupSwitcher === Status.Enum.ACTIVATE
+      keyboard.startupSwitcher === StatusInterfaces.StatusEnum.ACTIVATE ||
+      hardwareKeypad.startupSwitcher === StatusInterfaces.StatusEnum.ACTIVATE ||
+      systemKeypad.startupSwitcher === StatusInterfaces.StatusEnum.ACTIVATE
     ) {
-      if (gameboyStatus === StatusEnum.ACTIVATE) {
-        dispatch(KeyboardActions.inactivateStatus())
-        dispatch(HardwareActions.inactivateStatus())
-        dispatch(SystemActions.inactivateStatus())
-        dispatch(GameboyActions.inactivateStatus())
+      if (gameboyStatus === StatusInterfaces.StatusEnum.ACTIVATE) {
+        dispatch(hardwareActions.inactivateStatus())
+        dispatch(systemActions.inactivateStatus())
+        dispatch(gameboyActions.inactivateStatus())
       } else {
-        dispatch(KeyboardActions.activateStatus())
-        dispatch(HardwareActions.activateStatus())
-        dispatch(SystemActions.activateStatus())
-        dispatch(GameboyActions.activateStatus())
+        dispatch(hardwareActions.activateStatus())
+        dispatch(systemActions.activateStatus())
+        dispatch(gameboyActions.activateStatus())
       }
     }
   }, [
     keyboard.startupSwitcher,
-    keypad.startupSwitcher,
+    hardwareKeypad.startupSwitcher,
     systemKeypad.startupSwitcher
   ])
 }

@@ -1,14 +1,26 @@
+import { useEffect } from "react"
+import { useSelector } from "react-redux"
+import {
+  StatusInterfaces as SI,
+  KeypadInterfaces as KI
+} from "../../interfaces"
+import {
+  hardwareKeypadSelector,
+  keyboardSelector,
+  systemKeypadSelector
+} from "../../store/selectors"
+
 export default (dispatch, actions) => {
   const { startupSwitcher, directionalPad, operationalPad, actionPad } = actions
-  const keyboard = useSelector((state) => state.domains.keyboard)
-  const keypad = useSelector((state) => state.domains.hardware.keypad)
-  const systemKeypad = useSelector((state) => state.domains.system.keypad)
+  const keyboard = useSelector(keyboardSelector)
+  const hardwareKeypad = useSelector(hardwareKeypadSelector)
+  const systemKeypad = useSelector(systemKeypadSelector)
   // startup switcher
   useEffect(() => {
     if (
-      keyboard.startupSwitcher === StatusEnum.ACTIVATE ||
-      keypad.startupSwitcher === StatusEnum.ACTIVATE ||
-      systemKeypad.startupSwitcher === Status.Enum.ACTIVATE
+      keyboard.startupSwitcher === SI.StatusEnum.ACTIVATE ||
+      hardwareKeypad.startupSwitcher === SI.StatusEnum.ACTIVATE ||
+      systemKeypad.startupSwitcher === SI.StatusEnum.ACTIVATE
     ) {
       dispatch(startupSwitcher.keyboard())
       dispatch(startupSwitcher.hardware())
@@ -17,88 +29,88 @@ export default (dispatch, actions) => {
     }
   }, [
     keyboard.startupSwitcher,
-    keypad.startupSwitcher,
+    hardwareKeypad.startupSwitcher,
     systemKeypad.startupSwitcher
   ])
   // directional pad
   useEffect(() => {
     if (
-      keyboard.directionalPad.left === StatusEnum.ACTIVATE ||
-      keypad.directionalPad.left === StatusEnum.ACTIVATE
+      keyboard.directionalPad.left === SI.StatusEnum.ACTIVATE ||
+      hardwareKeypad.directionalPad.left === SI.StatusEnum.ACTIVATE
     ) {
-      dispatch(directionalPad.keyboard(DirectionalPadEnum.LEFT))
-      dispatch(directionalPad.hardware(DirectionalPadEnum.LEFT))
-      dispatch(directionalPad.system(DirectionalPadEnum.LEFT))
-      dispatch(directionalPad.gameboy(DirectionalPadEnum.LEFT))
+      dispatch(directionalPad.keyboard(KI.DirectionalPadEnum.LEFT))
+      dispatch(directionalPad.hardware(KI.DirectionalPadEnum.LEFT))
+      dispatch(directionalPad.system(KI.DirectionalPadEnum.LEFT))
+      dispatch(directionalPad.gameboy(KI.DirectionalPadEnum.LEFT))
     }
     if (
-      keyboard.directionalPad.right === StatusEnum.ACTIVATE ||
-      keypad.directionalPad.right === StatusEnum.ACTIVATE
+      keyboard.directionalPad.right === SI.StatusEnum.ACTIVATE ||
+      hardwareKeypad.directionalPad.right === SI.StatusEnum.ACTIVATE
     ) {
-      dispatch(directionalPad.keyboard(DirectionalPadEnum.RIGHT))
-      dispatch(directionalPad.hardware(DirectionalPadEnum.RIGHT))
-      dispatch(directionalPad.system(DirectionalPadEnum.RIGHT))
-      dispatch(directionalPad.gameboy(DirectionalPadEnum.RIGHT))
+      dispatch(directionalPad.keyboard(KI.DirectionalPadEnum.RIGHT))
+      dispatch(directionalPad.hardware(KI.DirectionalPadEnum.RIGHT))
+      dispatch(directionalPad.system(KI.DirectionalPadEnum.RIGHT))
+      dispatch(directionalPad.gameboy(KI.DirectionalPadEnum.RIGHT))
     }
     if (
-      keyboard.directionalPad.up === StatusEnum.ACTIVATE ||
-      keypad.directionalPad.up === StatusEnum.ACTIVATE
+      keyboard.directionalPad.up === SI.StatusEnum.ACTIVATE ||
+      hardwareKeypad.directionalPad.up === SI.StatusEnum.ACTIVATE
     ) {
-      dispatch(directionalPad.keyboard(DirectionalPadEnum.UP))
-      dispatch(directionalPad.hardware(DirectionalPadEnum.UP))
-      dispatch(directionalPad.system(DirectionalPadEnum.UP))
-      dispatch(directionalPad.gameboy(DirectionalPadEnum.UP))
+      dispatch(directionalPad.keyboard(KI.DirectionalPadEnum.UP))
+      dispatch(directionalPad.hardware(KI.DirectionalPadEnum.UP))
+      dispatch(directionalPad.system(KI.DirectionalPadEnum.UP))
+      dispatch(directionalPad.gameboy(KI.DirectionalPadEnum.UP))
     }
     if (
-      keyboard.directionalPad.down === StatusEnum.ACTIVATE ||
-      keypad.directionalPad.down === StatusEnum.ACTIVATE
+      keyboard.directionalPad.down === SI.StatusEnum.ACTIVATE ||
+      hardwareKeypad.directionalPad.down === SI.StatusEnum.ACTIVATE
     ) {
-      dispatch(directionalPad.keyboard(DirectionalPadEnum.DOWN))
-      dispatch(directionalPad.hardware(DirectionalPadEnum.DOWN))
-      dispatch(directionalPad.system(DirectionalPadEnum.DOWN))
-      dispatch(directionalPad.gameboy(DirectionalPadEnum.DOWN))
+      dispatch(directionalPad.keyboard(KI.DirectionalPadEnum.DOWN))
+      dispatch(directionalPad.hardware(KI.DirectionalPadEnum.DOWN))
+      dispatch(directionalPad.system(KI.DirectionalPadEnum.DOWN))
+      dispatch(directionalPad.gameboy(KI.DirectionalPadEnum.DOWN))
     }
-  }, [keyboard.directionalPad, keypad.directionalPad])
+  }, [keyboard.directionalPad, hardwareKeypad.directionalPad])
   // operational pad
   useEffect(() => {
     if (
-      keyboard.operaitonalPad.select === StatusEnum.ACTIVATE ||
-      keypad.operaitonalPad.select === StatusEnum.ACTIVATE
+      keyboard.operationalPad.select === SI.StatusEnum.ACTIVATE ||
+      hardwareKeypad.operationalPad.select === SI.StatusEnum.ACTIVATE
     ) {
-      dispatch(operationalPad.keyboard(OperationalPadEnum.SELECT))
-      dispatch(operationalPad.hardware(OperationalPadEnum.SELECT))
-      dispatch(operationalPad.system(OperationalPadEnum.SELECT))
-      dispatch(operationalPad.gameboy(OperationalPadEnum.SELECT))
+      dispatch(operationalPad.keyboard(KI.OperationalPadEnum.SELECT))
+      dispatch(operationalPad.hardware(KI.OperationalPadEnum.SELECT))
+      dispatch(operationalPad.system(KI.OperationalPadEnum.SELECT))
+      dispatch(operationalPad.gameboy(KI.OperationalPadEnum.SELECT))
     }
     if (
-      keyboard.operaitonalPad.start === StatusEnum.ACTIVATE ||
-      keypad.operaitonalPad.start === StatusEnum.ACTIVATE
+      keyboard.operationalPad.start === SI.StatusEnum.ACTIVATE ||
+      hardwareKeypad.operationalPad.start === SI.StatusEnum.ACTIVATE
     ) {
-      dispatch(operationalPad.keyboard(OperationalPadEnum.START))
-      dispatch(operationalPad.hardware(OperationalPadEnum.START))
-      dispatch(operationalPad.system(OperationalPadEnum.START))
-      dispatch(operationalPad.gameboy(OperationalPadEnum.START))
+      dispatch(operationalPad.keyboard(KI.OperationalPadEnum.START))
+      dispatch(operationalPad.hardware(KI.OperationalPadEnum.START))
+      dispatch(operationalPad.system(KI.OperationalPadEnum.START))
+      dispatch(operationalPad.gameboy(KI.OperationalPadEnum.START))
     }
-  }, [keyboard.operationalPad, keypad.operationalPad])
+  }, [keyboard.operationalPad, hardwareKeypad.operationalPad])
   // action pad
   useEffect(() => {
     if (
-      keyboard.actionPad.q === StatusEnum.ACTIVATE ||
-      keypad.actionPad.q === StatusEnum.ACTIVATE
+      keyboard.actionPad.q === SI.StatusEnum.ACTIVATE ||
+      hardwareKeypad.actionPad.q === SI.StatusEnum.ACTIVATE
     ) {
-      dispatch(actionPad.keyboard(ActionPadEnum.Q))
-      dispatch(actionPad.hardware(ActionPadEnum.Q))
-      dispatch(actionPad.system(ActionPadEnum.Q))
-      dispatch(actionPad.gameboy(ActionPadEnum.Q))
+      dispatch(actionPad.keyboard(KI.ActionPadEnum.Q))
+      dispatch(actionPad.hardware(KI.ActionPadEnum.Q))
+      dispatch(actionPad.system(KI.ActionPadEnum.Q))
+      dispatch(actionPad.gameboy(KI.ActionPadEnum.Q))
     }
     if (
-      keyboard.actionPad.e === StatusEnum.ACTIVATE ||
-      keypad.actionPad.e === StatusEnum.ACTIVATE
+      keyboard.actionPad.e === SI.StatusEnum.ACTIVATE ||
+      hardwareKeypad.actionPad.e === SI.StatusEnum.ACTIVATE
     ) {
-      dispatch(actionPad.keyboard(ActionPadEnum.E))
-      dispatch(actionPad.hardware(ActionPadEnum.E))
-      dispatch(actionPad.system(ActionPadEnum.E))
-      dispatch(actionPad.gameboy(ActionPadEnum.E))
+      dispatch(actionPad.keyboard(KI.ActionPadEnum.E))
+      dispatch(actionPad.hardware(KI.ActionPadEnum.E))
+      dispatch(actionPad.system(KI.ActionPadEnum.E))
+      dispatch(actionPad.gameboy(KI.ActionPadEnum.E))
     }
-  }, [keyboard.actionPad, keypad.actionPad])
+  }, [keyboard.actionPad, hardwareKeypad.actionPad])
 }

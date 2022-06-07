@@ -50,14 +50,14 @@ export default createSlice({
           if (direction === DOWN) state.keypad.directionalPad.down = INACTIVATE
         },
         // OPERATIONAL PAD
-        clickOperaionalPad(
+        clickOperationalPad(
           state: SystemInterfaces.SystemInterface,
           { payload: operation }: { payload: KeypadInterfaces.OperationalPadEnum }
         ) {
           if (operation === SELECT) state.keypad.operationalPad.select = ACTIVATE
           if (operation === START) state.keypad.operationalPad.start = ACTIVATE
         },
-        unclickOperaionalPad(
+        unclickOperationalPad(
           state: SystemInterfaces.SystemInterface,
           { payload: operation }: { payload: KeypadInterfaces.OperationalPadEnum }
         ) {
