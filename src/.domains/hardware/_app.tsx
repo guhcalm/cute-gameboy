@@ -1,5 +1,5 @@
 const HardwareApp = () => {
-    return <div />
+    return <div>hello world</div>
 }
 
 export default HardwareApp
