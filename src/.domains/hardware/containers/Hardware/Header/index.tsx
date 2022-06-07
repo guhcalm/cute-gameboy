@@ -8,15 +8,12 @@ import Container, { Middler, Session, Button } from "./style"
 export default () => {
   const status = useSelector(hardwareStatusSelector)
   const { ACTIVATE, INACTIVATE } = StatusInterfaces.StatusEnum
-  const className = status === ACTIVATE ? "activate" : "inactivate"
-
   const dispatch = useDispatch()
   const { actions } = hardwareSlice
   const clickDown = () => dispatch(actions.clickStartupSwitcher())
   const clickUp = () => dispatch(actions.unclickStartupSwitcher())
-
   return (
-    <Container className={className}>
+    <Container className={status === ACTIVATE ? "activate" : "inactivate"}>
       <Middler>
         <Session>
           <Button
@@ -24,15 +21,15 @@ export default () => {
             onMouseUp={clickUp}
             className={status === INACTIVATE ? "activate" : "inactivate"}
           >
-            ⮜ OFF
+            OFF
           </Button>
           •
           <Button
             onMouseDown={clickDown}
             onMouseUp={clickUp}
-            className={className}
+            className={status === ACTIVATE ? "activate" : "inactivate"}
           >
-            ON ⮞
+            ON
           </Button>
         </Session>
       </Middler>

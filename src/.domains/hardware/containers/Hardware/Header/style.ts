@@ -69,7 +69,7 @@ export const Session = styled.div`
   height: 15px;
   width: 65px;
   font-weight: 900;
-  padding: 0 5px;
+  padding: 0 12px;
   bottom: 3px;
   left: 10px;
   border-radius: 9px;
@@ -83,6 +83,7 @@ export const Session = styled.div`
 `
 
 export const Button = styled.button`
+user-select: none;
   flex-grow: 1;
   background-color: transparent;
   font-size: 8px;
