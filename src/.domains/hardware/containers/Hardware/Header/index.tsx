@@ -24,7 +24,7 @@ export default () => {
             onMouseUp={clickUp}
             className={status === INACTIVATE ? "activate" : "inactivate"}
           >
-            ◀ OFF
+            ⮜ OFF
           </Button>
           •
           <Button
@@ -32,7 +32,7 @@ export default () => {
             onMouseUp={clickUp}
             className={className}
           >
-            ON ▶
+            ON ⮞
           </Button>
         </Session>
       </Middler>
