@@ -5,7 +5,7 @@ import Container, { Button } from "./style"
 
 export default () => {
   const status = useSelector(hardwareStatusSelector)
-  const { ACTIVATE } =  StatusInterfaces.StatusEnum
+  const { ACTIVATE } = StatusInterfaces.StatusEnum
   return (
     <Container className={status === ACTIVATE ? "activate" : "inactivate"}>
       <Button>

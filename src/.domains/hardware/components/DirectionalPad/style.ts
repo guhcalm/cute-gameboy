@@ -29,7 +29,9 @@ export default styled.div`
   }
   &.activate {
     top: calc(46% + 30px);
-    @media screen and (min-width: 700px) {top: calc(60% + 40px);}
+    @media screen and (min-width: 700px) {
+      top: calc(60% + 40px);
+    }
   }
 `
 

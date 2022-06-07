@@ -1,9 +1,9 @@
 import { useDispatch } from "react-redux"
 import Container, { Button } from "./style"
-import {hardwareSlice} from "../../store/reducers"
+import { hardwareSlice } from "../../store/reducers"
 export default () => {
   const dispatch = useDispatch()
-  const {actions} = hardwareSlice
+  const { actions } = hardwareSlice
   const clickDown = () => dispatch(actions.clickStartupSwitcher())
   const clickUp = () => dispatch(actions.unclickStartupSwitcher())
   return (
