@@ -34,6 +34,7 @@ export default (dispatch, actions) => {
   ])
   // directional pad
   useEffect(() => {
+    console.log("directional Pad was clicked")
     if (
       keyboard.directionalPad.left === SI.StatusEnum.ACTIVATE ||
       hardwareKeypad.directionalPad.left === SI.StatusEnum.ACTIVATE

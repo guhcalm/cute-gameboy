@@ -2,7 +2,6 @@ import { useSelector } from "react-redux"
 import { Gameboy } from "./containers"
 import { MouseApp, KeyboardApp, HardwareApp, SystemApp } from "./.domains"
 import { useMousePosition, useStatus, useKeypad } from "./hooks"
-import { gameboyKeysSelector } from "./store/selectors"
 
 const GameboyApp = () => {
   // domains
@@ -12,7 +11,7 @@ const GameboyApp = () => {
   useMousePosition()
   useStatus()
   useKeypad()
-  const store = useSelector(gameboyKeysSelector)
+  const store = useSelector((state) => state.gameboy.keys.directionalPad)
   console.log(store)
   return (
     <Gameboy>
