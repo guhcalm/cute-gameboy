@@ -14,7 +14,7 @@ import {
 export default () => {
   const status = useSelector(hardwareStatusSelector)
   return (
-    <Container className={status ? "activate" : "inactivate"}>
+    <Container className={!status ? "activate" : "inactivate"}>
       <Header />
       <Main>
         <Display />
