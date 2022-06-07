@@ -1,5 +1,7 @@
+import { Hardware } from "./containers"
+
 const HardwareApp = () => {
-  return <div>hello world</div>
+  return <Hardware></Hardware>
 }
 
 export default HardwareApp

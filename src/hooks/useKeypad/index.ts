@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux"
 import { gameboySlice } from "../../store/reducers"
 import { hardwareSlice, systemSlice, keyboardSlice } from "../../.domains"
-import onClick from "./onClick"
+import * as onClick from "./onClick"
 
 export default () => {
   const dispatch = useDispatch()
@@ -9,8 +9,9 @@ export default () => {
   const { actions: hardwareActions } = hardwareSlice
   const { actions: systemActions } = systemSlice
   const { actions: gameboyActions } = gameboySlice
+  /*
   // ON CLICK DOWN
-  onClick(dispatch, {
+  onClick.clickDown(dispatch, {
     startupSwitcher: {
       keyboard: keyboardActions.clickStartupSwitcher,
       hardware: hardwareActions.clickStartupSwitcher,
@@ -36,8 +37,9 @@ export default () => {
       gameboy: gameboyActions.clickActionPad
     }
   })
+  
   // ON CLICK UP
-  onClick(dispatch, {
+  onClick.clickUp(dispatch, {
     startupSwitcher: {
       keyboard: keyboardActions.unclickStartupSwitcher,
       hardware: hardwareActions.unclickStartupSwitcher,
@@ -62,5 +64,5 @@ export default () => {
       system: systemActions.unclickActionPad,
       gameboy: gameboyActions.unclickActionPad
     }
-  })
+  }) */
 }

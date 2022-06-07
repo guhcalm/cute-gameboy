@@ -45,5 +45,5 @@ export const clickUp = (code: number, dispatch: any) => {
   if (code === 69) dispatch(keyboardActions.unclickActionPad(E)) // e
   // Startup
   if (code === 84 || code === 27)
-    dispatch(keyboardActions.clickStartupSwitcher()) // t
+    dispatch(keyboardActions.unclickStartupSwitcher()) // t
 }

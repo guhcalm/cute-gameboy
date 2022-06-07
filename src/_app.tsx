@@ -1,18 +1,19 @@
 import { useSelector } from "react-redux"
 import { Gameboy } from "./containers"
 import { MouseApp, KeyboardApp, HardwareApp, SystemApp } from "./.domains"
-import { useMousePosition, useStatus, useKeypad } from "./hooks"
+import * as reconciliation from "./hooks"
 
 const GameboyApp = () => {
   // domains
   MouseApp()
   KeyboardApp()
-  // managers
-  useMousePosition()
-  useStatus()
-  useKeypad()
-  const store = useSelector((state) => state.gameboy.keys.directionalPad)
-  console.log(store)
+  // reconciliators
+  reconciliation.useMousePosition()
+  reconciliation.useStatus()
+  reconciliation.useKeypad()
+  // state
+  const store = useSelector((state) => state.gameboy.status)
+  console.log(store, "status")
   return (
     <Gameboy>
       <HardwareApp />
