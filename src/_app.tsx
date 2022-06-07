@@ -1,7 +1,5 @@
-import { useSelector } from "react-redux"
 import { Gameboy } from "./containers"
 import { MouseApp, KeyboardApp } from "./.domains"
-import { GlobalInterfaces } from "./interfaces"
 import { useMousePosition } from "./hooks"
 
 const GameboyApp = () => {
