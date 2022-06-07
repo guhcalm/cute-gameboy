@@ -1,4 +1,3 @@
-export * as MouseInterfaces from "./mouse"
 export * as StatusInterfaces from "./status"
 export * as KeypadInterfaces from "./keypad"
 export * as HardwareInterfaces from "./hardware"

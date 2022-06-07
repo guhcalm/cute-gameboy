@@ -5,7 +5,6 @@ const { INACTIVATE } = StatusInterfaces.StatusEnum
 
 export default {
   status: INACTIVATE,
-  mouse: { position: { x: 0, y: 0 } },
   settings: { theme: Default },
   keys: {
     startupSwitcher: INACTIVATE,

@@ -83,7 +83,7 @@ export const Session = styled.div`
 `
 
 export const Button = styled.button`
-user-select: none;
+  user-select: none;
   flex-grow: 1;
   background-color: transparent;
   font-size: 8px;

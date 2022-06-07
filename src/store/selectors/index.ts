@@ -1,9 +1,5 @@
 import { GlobalInterfaces } from "../../interfaces"
 
-// mouse selectors
-export const mouseSelector = (state: GlobalInterfaces.GlobalInterface) =>
-  state.domains.mouse
-
 // keyboard selectors
 export const keyboardSelector = (state: GlobalInterfaces.GlobalInterface) =>
   state.domains.keyboard

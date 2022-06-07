@@ -20,13 +20,17 @@ export default () => {
             onMouseDown={clickDown}
             onMouseUp={clickUp}
             className={status === INACTIVATE ? "activate" : "inactivate"}
-          >OFF</Button>
+          >
+            OFF
+          </Button>
           •
           <Button
             onMouseDown={clickDown}
             onMouseUp={clickUp}
             className={status === ACTIVATE ? "activate" : "inactivate"}
-          >ON</Button>
+          >
+            ON
+          </Button>
         </Session>
       </Middler>
     </Container>

@@ -3,7 +3,6 @@ import initialState from "./initialState"
 import {
   GameboyInterfaces,
   KeypadInterfaces,
-  MouseInterfaces,
   StatusInterfaces
 } from "../../../interfaces"
 
@@ -16,13 +15,6 @@ export default createSlice({
   name: "gameboy",
   initialState,
   reducers: {
-    // Mouse
-    setMousePosition(
-      state: GameboyInterfaces.GameboyInterface,
-      { payload: position }: { payload: MouseInterfaces.MouseInterface }
-    ) {
-      state.mouse = { ...position }
-    },
     // Status
     activateStatus(state: GameboyInterfaces.GameboyInterface) {
       state.status = ACTIVATE
