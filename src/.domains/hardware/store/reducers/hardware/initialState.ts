@@ -6,7 +6,7 @@ export default {
     keypad: {
         startupSwitcher: INACTIVATE,
         directionalPad: {
-            left: INACTIVATE;
+            left: INACTIVATE,
             right: INACTIVATE,
             up: INACTIVATE,
             down: INACTIVATE
