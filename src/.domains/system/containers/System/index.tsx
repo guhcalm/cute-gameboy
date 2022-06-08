@@ -1,1 +1,3 @@
-export default () => <div />
+import Container from "./style"
+
+export default () => <Container />

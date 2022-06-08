@@ -14,13 +14,19 @@ export default styled.div`
   width: calc(100% - 100px);
   max-height: calc(100% - 50px);
   max-width: calc(100% - 100px);
-  background-color: var(--terciary);
-  box-shadow: inset 0 0 10px 3px var(--terciary-on-dark);
   background: linear-gradient(
     -60deg,
     var(--terciary-on-light),
     var(--terciary)
   );
   animation: ${light} 12s linear alternate infinite;
-  background-size: 300%;
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 10px 3px var(--terciary-on-dark);
+    position: absolute;
+    top: 0;
+  }
 `
