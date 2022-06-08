@@ -6,8 +6,7 @@ import * as selector from "../../store/selectors"
 
 export default () => ({
   dispatch: useDispatch(),
-  status: useSelector(selector.gameboyStatusSelector),
-  keypad: useSelector(selector.gameboyKeysSelector),
+  gameboy: useSelector(selector.gameboySelector),
   domains: {
     hardware: useSelector(selector.hardwareSelector),
     keyboard: useSelector(selector.keyboardSelector),

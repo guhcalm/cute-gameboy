@@ -27,7 +27,7 @@ export default createSlice({
       state.keys.startupSwitcher = ACTIVATE
     },
     unclickStartupSwitcher(state: GameboyInterfaces.GameboyInterface) {
-      state.keys.startupSwitcher = ACTIVATE
+      state.keys.startupSwitcher = INACTIVATE
     },
     // Directional Pad
     clickDirectionalPad(
@@ -43,10 +43,10 @@ export default createSlice({
       state: GameboyInterfaces.GameboyInterface,
       { payload: direction }: { payload: KeypadInterfaces.DirectionalPadEnum }
     ) {
-      if (direction === LEFT) state.keys.directionalPad.left = ACTIVATE
-      if (direction === RIGHT) state.keys.directionalPad.right = ACTIVATE
-      if (direction === UP) state.keys.directionalPad.up = ACTIVATE
-      if (direction === DOWN) state.keys.directionalPad.down = ACTIVATE
+      if (direction === LEFT) state.keys.directionalPad.left = INACTIVATE
+      if (direction === RIGHT) state.keys.directionalPad.right = INACTIVATE
+      if (direction === UP) state.keys.directionalPad.up = INACTIVATE
+      if (direction === DOWN) state.keys.directionalPad.down = INACTIVATE
     },
     // Operational Pad
     clickOperationalPad(
