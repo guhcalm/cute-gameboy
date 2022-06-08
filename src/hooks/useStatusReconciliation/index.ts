@@ -4,7 +4,7 @@ import { useGameboyContext } from ".."
 export default () => {
   const { dispatch, gameboy, actions, enums, domains } = useGameboyContext()
   const { ACTIVATE, INACTIVATE } = enums.status
-  const { hardware, system } = domains
+  const { hardware, system, keyboard } = domains
   useEffect(() => {
     if (
       gameboy.status !== hardware.status ||

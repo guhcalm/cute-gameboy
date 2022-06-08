@@ -12,6 +12,8 @@ export default styled.div`
   position: relative;
   height: calc(100% - 50px);
   width: calc(100% - 100px);
+  max-height: calc(100% - 50px);
+  max-width: calc(100% - 100px);
   background-color: var(--terciary);
   box-shadow: inset 0 0 10px 3px var(--terciary-on-dark);
   background: linear-gradient(
