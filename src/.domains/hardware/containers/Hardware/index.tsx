@@ -1,8 +1,6 @@
 import { ReactNode } from "react"
 import Container from "./style"
-import Header from "./Header"
-import Main from "./Main"
-import Footer from "./Footer"
+import { Header, Main, Footer } from "../../components"
 import { useHardwareContext } from "../../hooks"
 
 export default ({ children: HardwareContent }: { children: ReactNode }) => {

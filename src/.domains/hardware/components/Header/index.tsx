@@ -1,5 +1,5 @@
 import Container, { Middler, Session, Button } from "./style"
-import { useHardwareContext } from "../../../hooks"
+import { useHardwareContext } from "../../hooks"
 
 export default () => {
   const { className, inverseClass, dispatch, actions } = useHardwareContext()
