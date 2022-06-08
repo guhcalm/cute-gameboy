@@ -14,8 +14,8 @@ export default () => {
 
   useEffect(() => {
     const handlerMouse = (e) => onMouseMove(e, setMousePos)
-    window.addEventListener("pointermove", handlerMouse)
-    return () => window.removeEventListener("pointermove", handlerMouse)
+    window.addEventListener("mousemove", handlerMouse)
+    return () => window.removeEventListener("mousemove", handlerMouse)
   }, [])
 
   useEffect(() => {
