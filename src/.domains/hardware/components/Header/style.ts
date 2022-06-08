@@ -82,10 +82,10 @@ export const Session = styled.div`
     inset -0.5px -0.5px 2px var(--primary-on-light),
     inset 1px 1px 8px rgba(0, 0, 0, 0.4), inset 5px 5px 20px rgba(0, 0, 0, 0.4);
   user-select: none;
-  cursor: pointer;
 `
 
 export const Button = styled.div`
+  cursor: pointer;
   flex-grow: 1;
   background-color: transparent;
   font-size: 8px;
