@@ -1,11 +1,11 @@
 import { Gameboy } from "./containers"
 import { KeyboardApp, HardwareApp, SystemApp } from "./.domains"
-import * as reconciliation from "./hooks"
+import { useStatusReconcitilation, useKeypadReconciliation } from "./hooks"
 
 const GameboyApp = () => {
   KeyboardApp()
-  reconciliation.useStatus()
-  reconciliation.useKeypad()
+  useStatusReconcitilation()
+  useKeypadReconciliation()
   return (
     <Gameboy>
       <HardwareApp>

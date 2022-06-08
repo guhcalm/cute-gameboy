@@ -35,7 +35,7 @@ export const Button = styled.div`
   &:hover,
   &:focus,
   &:active,
-  &.pressed {
+  &.activate {
     &::after {
       box-shadow: inset 0 0 0 0.7px var(--secondary),
         inset 0 0 0 1.4px var(--secondary-on-dark),

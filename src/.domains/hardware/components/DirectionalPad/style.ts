@@ -64,7 +64,7 @@ export const Left = styled.button`
   &:hover,
   &:focus,
   &:active,
-  &.pressed {
+  &.activate {
     box-shadow: inset 0.7px 0.7px 0 0 var(--secondary),
       inset 0.7px -0.7px 0 0 var(--secondary),
       inset 1.4px 1.4px 0 0 var(--secondary-on-dark),
@@ -99,7 +99,7 @@ export const Right = styled.button`
   &:hover,
   &:focus,
   &:active,
-  &.pressed {
+  &.activate {
     box-shadow: inset -0.7px 0.7px 0 0 var(--secondary),
       inset -0.7px -0.7px 0 0 var(--secondary),
       inset -1.4px 1.4px 0 0 var(--secondary-on-dark),
@@ -132,7 +132,7 @@ export const Up = styled.button`
   &:hover,
   &:focus,
   &:active,
-  &.pressed {
+  &.activate {
     box-shadow: inset 0.7px 0.7px 0 0 var(--secondary),
       inset -0.7px 0.7px 0 0 var(--secondary),
       inset 1.4px 1.4px 0 0 var(--secondary-on-dark),
@@ -166,7 +166,7 @@ export const Down = styled.button`
   &:hover,
   &:focus,
   &:active,
-  &.pressed {
+  &.activate {
     box-shadow: inset 0.7px -0.7px 0 0 var(--secondary),
       inset -0.7px -0.7px 0 0 var(--secondary),
       inset 1.4px -1.4px 0 0 var(--secondary-on-dark),

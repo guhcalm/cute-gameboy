@@ -40,10 +40,11 @@ export const Button = styled.button`
     inset 0 -15px 8px -8px var(--quaternary-on-dark),
     inset 0 15px 8px -8px var(--quaternary-on-light),
     1px 1px 4px rgba(0, 0, 0, 1);
+
   &:hover,
   &:focus,
   &:active,
-  &.pressed {
+  &.activate {
     text-shadow: none;
     box-shadow: inset 0 0 0 0.7px var(--quaternary),
       inset 0 0 0 1.4px var(--quaternary-on-dark),

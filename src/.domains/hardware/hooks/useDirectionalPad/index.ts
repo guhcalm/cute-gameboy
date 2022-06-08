@@ -1,10 +1,11 @@
 import { useHardwareContext } from ".."
 
 export default () => {
-  const { className, dispatch, actions, enumn } = useHardwareContext()
+  const { className, dispatch, actions, enumn, keypad } = useHardwareContext()
   const { LEFT, RIGHT, UP, DOWN } = enumn.directionalPad
   return {
     className,
+    directionalPad: keypad.directionalPad,
     clickDown: {
       left: () => dispatch(actions.clickDirectionalPad(LEFT)),
       right: () => dispatch(actions.clickDirectionalPad(RIGHT)),

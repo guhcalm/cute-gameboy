@@ -1,10 +1,11 @@
 import useHardwareContext from "../useHardwareContext"
 
 export default () => {
-  const { className, dispatch, actions, enumn } = useHardwareContext()
+  const { className, dispatch, actions, enumn, keypad } = useHardwareContext()
   const { Q, E } = enumn.actionPad
   return {
     className,
+    actionPad: keypad.actionPad,
     clickDown: {
       Q: () => dispatch(actions.clickActionPad(Q)),
       E: () => dispatch(actions.clickActionPad(E))

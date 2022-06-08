@@ -1,9 +1,11 @@
 import { useHardwareContext } from ".."
 
 export default () => {
-  const { dispatch, actions, enumn } = useHardwareContext()
+  const { className, dispatch, actions, enumn, keypad } = useHardwareContext()
   const { SELECT, START } = enumn.operationalPad
   return {
+    className,
+    operationalPad: keypad.operationalPad,
     clickDown: {
       select: () => dispatch(actions.clickOperationalPad(SELECT)),
       start: () => dispatch(actions.clickOperationalPad(START))
