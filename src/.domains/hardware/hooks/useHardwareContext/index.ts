@@ -1,17 +1,14 @@
 import { useDispatch } from "react-redux"
 import { useSelector } from "react-redux"
 import { KeypadInterfaces, StatusInterfaces } from "../../../../interfaces"
-import {
-  hardwareStatusSelector,
-  keyboardSelector
-} from "../../../../store/selectors"
+import * as selectors from "../../../../store/selectors"
 import { hardwareSlice } from "../../store/reducers"
 
 export default () => {
   // state
-  const status = useSelector(hardwareStatusSelector)
+  const status = useSelector(selectors.hardwareStatusSelector)
+  const keypad = useSelector(selectors.hardwareKeypadSelector)
   const { ACTIVATE } = StatusInterfaces.StatusEnum
-  const keypad = useSelector(keyboardSelector)
   // Pads
   const dispatch = useDispatch()
   const { actions } = hardwareSlice

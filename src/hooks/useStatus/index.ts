@@ -3,20 +3,15 @@ import { useSelector, useDispatch } from "react-redux"
 import { StatusInterfaces } from "../../interfaces"
 import { hardwareSlice, systemSlice } from "../../.domains"
 import { gameboySlice } from "../../store/reducers"
-import {
-  gameboyStatusSelector,
-  hardwareKeypadSelector,
-  keyboardSelector,
-  systemKeypadSelector
-} from "../../store/selectors"
+import * as selectors from "../../store/selectors"
 
 export default () => {
   const dispatch = useDispatch()
-  const keyboard = useSelector(keyboardSelector)
+  const keyboard = useSelector(selectors.keyboardSelector)
   // selectors
-  const hardwareKeypad = useSelector(hardwareKeypadSelector)
-  const systemKeypad = useSelector(systemKeypadSelector)
-  const gameboyStatus = useSelector(gameboyStatusSelector)
+  const hardwareKeypad = useSelector(selectors.hardwareKeypadSelector)
+  const systemKeypad = useSelector(selectors.systemKeypadSelector)
+  const gameboyStatus = useSelector(selectors.gameboyStatusSelector)
   // actions
   const { actions: hardwareActions } = hardwareSlice
   const { actions: systemActions } = systemSlice
