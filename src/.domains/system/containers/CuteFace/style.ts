@@ -17,7 +17,7 @@ export const Face = styled.div`
   position: absolute;
   left: 50%;
   top: 75%;
-  transform: translate(-50%, -50%) scale(0.75);
+  transform: translate(-50%, -50%) scale(0.7);
   --color: white;
   filter: drop-shadow(0 0 2px var(--color));
   &::before,
