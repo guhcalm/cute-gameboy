@@ -6,13 +6,9 @@ export default () => {
   const clickDown = () => dispatch(actions.clickStartupSwitcher())
   const clickUp = () => dispatch(actions.unclickStartupSwitcher())
   return (
-    <Container
-      className={className}
-      onMouseDown={clickDown}
-      onMouseUp={clickUp}
-    >
+    <Container className={className}>
       <Middler>
-        <Session>
+        <Session onMouseDown={clickDown} onMouseUp={clickUp}>
           <Button className={inverseClass}>OFF</Button>•
           <Button className={className}>ON</Button>
         </Session>
