@@ -5,13 +5,13 @@ import * as selectors from "../../../../store/selectors"
 import { hardwareSlice } from "../../store/reducers"
 
 export default () => {
-  // state
   const status = useSelector(selectors.hardwareStatusSelector)
-  const keypad = useSelector(selectors.hardwareKeypadSelector)
-  const { ACTIVATE } = StatusInterfaces.StatusEnum
-  // Pads
+  const { directionalPad, actionPad, operationalPad } = useSelector(
+    selectors.hardwareKeypadSelector
+  )
   const dispatch = useDispatch()
   const { actions } = hardwareSlice
+  const { ACTIVATE } = StatusInterfaces.StatusEnum
   return {
     className: status === ACTIVATE ? "activate" : "inactivate",
     inverseClass: status !== ACTIVATE ? "activate" : "inactivate",
@@ -24,23 +24,18 @@ export default () => {
     },
     keypad: {
       directionalPad: {
-        left:
-          keypad.directionalPad.left === ACTIVATE ? "activate" : "inactivate",
-        right:
-          keypad.directionalPad.right === ACTIVATE ? "activate" : "inactivate",
-        up: keypad.directionalPad.up === ACTIVATE ? "activate" : "inactivate",
-        down:
-          keypad.directionalPad.down === ACTIVATE ? "activate" : "inactivate"
+        left: directionalPad.left === ACTIVATE ? "activate" : "inactivate",
+        right: directionalPad.right === ACTIVATE ? "activate" : "inactivate",
+        up: directionalPad.up === ACTIVATE ? "activate" : "inactivate",
+        down: directionalPad.down === ACTIVATE ? "activate" : "inactivate"
       },
       actionPad: {
-        q: keypad.actionPad.q === ACTIVATE ? "activate" : "inactivate",
-        e: keypad.actionPad.e === ACTIVATE ? "activate" : "inactivate"
+        q: actionPad.q === ACTIVATE ? "activate" : "inactivate",
+        e: actionPad.e === ACTIVATE ? "activate" : "inactivate"
       },
       operationalPad: {
-        select:
-          keypad.operationalPad.select === ACTIVATE ? "activate" : "inactivate",
-        start:
-          keypad.operationalPad.start === ACTIVATE ? "activate" : "inactivate"
+        select: operationalPad.select === ACTIVATE ? "activate" : "inactivate",
+        start: operationalPad.start === ACTIVATE ? "activate" : "inactivate"
       }
     }
   }
