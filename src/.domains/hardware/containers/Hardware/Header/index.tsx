@@ -1,36 +1,20 @@
-import { useSelector } from "react-redux"
-import { useDispatch } from "react-redux"
-import { hardwareSlice } from "../../../store/reducers"
-import { StatusInterfaces } from "../../../../../interfaces"
-import { hardwareStatusSelector } from "../../../../../store/selectors"
 import Container, { Middler, Session, Button } from "./style"
+import { useHardwareContext } from "../../../hooks"
 
 export default () => {
-  const status = useSelector(hardwareStatusSelector)
-  const { ACTIVATE, INACTIVATE } = StatusInterfaces.StatusEnum
-  const dispatch = useDispatch()
-  const { actions } = hardwareSlice
+  const { className, inverseClass, dispatch, actions } = useHardwareContext()
   const clickDown = () => dispatch(actions.clickStartupSwitcher())
   const clickUp = () => dispatch(actions.unclickStartupSwitcher())
   return (
-    <Container className={status === ACTIVATE ? "activate" : "inactivate"}>
+    <Container
+      className={className}
+      onMouseDown={clickDown}
+      onMouseUp={clickUp}
+    >
       <Middler>
         <Session>
-          <Button
-            onMouseDown={clickDown}
-            onMouseUp={clickUp}
-            className={status === INACTIVATE ? "activate" : "inactivate"}
-          >
-            OFF
-          </Button>
-          •
-          <Button
-            onMouseDown={clickDown}
-            onMouseUp={clickUp}
-            className={status === ACTIVATE ? "activate" : "inactivate"}
-          >
-            ON
-          </Button>
+          <Button className={inverseClass}>OFF</Button>•
+          <Button className={className}>ON</Button>
         </Session>
       </Middler>
     </Container>

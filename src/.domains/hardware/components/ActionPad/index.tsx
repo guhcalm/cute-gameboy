@@ -1,17 +1,14 @@
-import { useSelector } from "react-redux"
-import { StatusInterfaces } from "../../../../interfaces"
-import { hardwareStatusSelector } from "../../../../store/selectors"
 import Container, { Button } from "./style"
+import { useActionPad } from "../../hooks"
 
 export default () => {
-  const status = useSelector(hardwareStatusSelector)
-  const { ACTIVATE } = StatusInterfaces.StatusEnum
+  const { className, clickDown, clickUp } = useActionPad()
   return (
-    <Container className={status === ACTIVATE ? "activate" : "inactivate"}>
-      <Button>
+    <Container className={className}>
+      <Button onMouseDown={clickDown.Q} onMouseUp={clickUp.Q}>
         <span>Q</span>
       </Button>
-      <Button>
+      <Button onMouseDown={clickDown.E} onMouseUp={clickUp.E}>
         <span>E</span>
       </Button>
     </Container>

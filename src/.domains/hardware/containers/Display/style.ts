@@ -50,6 +50,7 @@ export const Screen = styled.div`
 `
 
 export const Info = styled.div`
+  user-select: none;
   position: absolute;
   top: 12.5px;
   left: 50%;
@@ -75,6 +76,7 @@ export const Info = styled.div`
 `
 
 export const Logo = styled.div`
+  user-select: none;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -96,6 +98,7 @@ export const Logo = styled.div`
 `
 
 export const Battery = styled.div`
+  user-select: none;
   position: absolute;
   left: 25px;
   top: 50%;

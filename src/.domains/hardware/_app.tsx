@@ -1,11 +1,11 @@
 import { ReactNode } from "react"
+import { Hardware, Display } from "./containers"
 import {
   ActionPad,
   DirectionalPad,
   OperationalPad,
   Speaker
 } from "./components"
-import { Hardware, Display } from "./containers"
 
 const HardwareApp = ({ children: System }: { children: ReactNode }) => {
   return (

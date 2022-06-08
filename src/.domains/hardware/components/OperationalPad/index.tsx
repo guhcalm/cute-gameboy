@@ -1,19 +1,14 @@
-import { useDispatch } from "react-redux"
 import Container, { Button } from "./style"
-import { hardwareSlice } from "../../store/reducers"
+import { useOperationalPad } from "../../hooks"
+
 export default () => {
-  const dispatch = useDispatch()
-  const { actions } = hardwareSlice
-  const clickDown = () => dispatch(actions.clickStartupSwitcher())
-  const clickUp = () => dispatch(actions.unclickStartupSwitcher())
+  const { clickDown, clickUp } = useOperationalPad()
   return (
     <Container>
-      <Button>
-        <button></button>
+      <Button onMouseDown={clickDown.select} onMouseUp={clickUp.select}>
         <span>SELECT</span>
       </Button>
-      <Button>
-        <button onMouseDown={clickDown} onMouseUp={clickUp}></button>
+      <Button onMouseDown={clickDown.start} onMouseUp={clickUp.start}>
         <span>START</span>
       </Button>
     </Container>

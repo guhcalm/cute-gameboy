@@ -9,6 +9,7 @@ export default styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   &::before,
   &::after {
     will-change: border-radius;
@@ -80,17 +81,17 @@ export const Session = styled.div`
   box-shadow: inset 0.5px 0.5px 2px var(--primary-on-dark),
     inset -0.5px -0.5px 2px var(--primary-on-light),
     inset 1px 1px 8px rgba(0, 0, 0, 0.4), inset 5px 5px 20px rgba(0, 0, 0, 0.4);
+  user-select: none;
+  cursor: pointer;
 `
 
-export const Button = styled.button`
-  user-select: none;
+export const Button = styled.div`
   flex-grow: 1;
   background-color: transparent;
   font-size: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 
   transition: 0.8s;
   &.inactivate {

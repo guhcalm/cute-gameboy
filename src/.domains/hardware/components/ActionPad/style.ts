@@ -28,6 +28,7 @@ export default styled.div`
 `
 
 export const Button = styled.button`
+  user-select: none;
   --diameter: 50px;
   height: var(--diameter);
   width: var(--diameter);

@@ -1,18 +1,15 @@
 import { ReactNode } from "react"
-import { useSelector } from "react-redux"
-import { StatusInterfaces } from "../../../../interfaces"
-import { hardwareStatusSelector } from "../../../../store/selectors"
+import { useHardwareContext } from "../../hooks"
 import Container, { Screen, Info, Logo, Battery } from "./style"
 
 export default ({ children: System }: { children: ReactNode }) => {
-  const status = useSelector(hardwareStatusSelector)
-  const { ACTIVATE } = StatusInterfaces.StatusEnum
+  const { className } = useHardwareContext()
   return (
-    <Container className={status === ACTIVATE ? "activate" : "inactivate"}>
+    <Container className={className}>
       <Info>
         <span>DOT MATRIX WITH STERIO SOUND</span>
       </Info>
-      <Battery className={status === ACTIVATE ? "activate" : "inactivate"}>
+      <Battery className={className}>
         <span>Battery</span>
       </Battery>
       <Screen>{System}</Screen>
