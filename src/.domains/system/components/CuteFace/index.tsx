@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import Container, { Face, Mounth } from "./style"
 
 const onMouseMove = (e, setMousePos) => setMousePos(() => ({ x: e.x, y: e.y }))
+const VEL = 0.6
 
 export default () => {
   const faceRef = useRef<HTMLDivElement>(null)
@@ -10,16 +11,12 @@ export default () => {
     x: window.innerWidth / 2,
     y: window.innerHeight / 2
   })
-  const [frame, setFrame] = useState(0)
-  const VEL = .6
-  const handlerMouse = (e) => onMouseMove(e, setMousePos)
 
   useEffect(() => {
+    const handlerMouse = (e) => onMouseMove(e, setMousePos)
     window.addEventListener("pointermove", handlerMouse)
     return () => window.removeEventListener("pointermove", handlerMouse)
-  }, [mousePos])
-
-
+  }, [])
 
   useEffect(() => {
     const boxPos = faceRef.current?.getBoundingClientRect()
