@@ -3,14 +3,19 @@ import { useHardwareContext } from "../../hooks"
 
 export default () => {
   const { className, inverseClass, dispatch, actions } = useHardwareContext()
-  const clickDown = () => dispatch(actions.clickStartupSwitcher())
-  const clickUp = () => dispatch(actions.unclickStartupSwitcher())
+  const clickDown = () => dispatch(actions.activateStatus())
+  const clickUp = () => dispatch(actions.inactivateStatus())
   return (
     <Container className={className}>
       <Middler>
-        <Session onMouseDown={clickDown} onMouseUp={clickUp}>
-          <Button className={inverseClass}>OFF</Button>•
-          <Button className={className}>ON</Button>
+        <Session>
+          <Button className={inverseClass} onClick={clickUp}>
+            OFF
+          </Button>
+          •
+          <Button className={className} onClick={clickDown}>
+            ON
+          </Button>
         </Session>
       </Middler>
     </Container>
