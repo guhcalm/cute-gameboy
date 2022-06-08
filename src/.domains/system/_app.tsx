@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux"
 import { StatusInterfaces } from "../../interfaces"
 import { systemStatusSelector } from "../../store/selectors"
-import { System, CuteFace } from "./containers"
+import { System } from "./containers"
+import { CuteFace } from "./components"
 
 const SystemApp = () => {
   const status = useSelector(systemStatusSelector)
