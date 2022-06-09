@@ -15,7 +15,7 @@ const light = keyframes`
 
 const bright = keyframes`
   0% { box-shadow: inset 0 0 0px .3px var(--primary-on-light), inset 0 0 10px 3px var(--primary-on-dark), 0 0 2px var(--primary-on-light); }
-  100% { box-shadow: inset 0 0 0px .5px var(--primary-on-light), inset 0 0 10px 3px var(--primary-on-dark), 0 0 10px var(--primary-on-light); }
+  100% { box-shadow: inset 0 0 0px .5px var(--primary-on-light), inset 0 0 10px 3px var(--primary-on-dark), 0 0 5px var(--primary-on-light); }
 `
 
 export default styled.div`

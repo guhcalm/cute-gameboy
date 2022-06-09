@@ -3,7 +3,8 @@ import styled, { keyframes } from "styled-components"
 export default styled.div`
   width: 100%;
   height: 100%;
-  position: relative;
+  position: absolute;
+  top: 0;
   visibility: hidden;
   overflow: hidden;
 `

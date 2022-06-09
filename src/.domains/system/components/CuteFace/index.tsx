@@ -7,6 +7,7 @@ const VEL = 0.6
 export default () => {
   const faceRef = useRef<HTMLDivElement>(null)
   const [pos, setPos] = useState({ x: 50, y: 75 })
+  const { x, y } = pos
   const [mousePos, setMousePos] = useState({
     x: window.innerWidth / 2,
     y: window.innerHeight / 2
@@ -44,7 +45,7 @@ export default () => {
         return newPos
       })
     }
-  }, [pos])
+  }, [x, y])
 
   return (
     <Container>
