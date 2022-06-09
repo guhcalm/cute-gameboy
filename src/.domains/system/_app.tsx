@@ -1,18 +1,11 @@
-import { useSelector } from "react-redux"
-import { StatusInterfaces } from "../../interfaces"
-import { systemStatusSelector } from "../../store/selectors"
+import { useStatus, useSystemContext } from "./hooks"
 import { System } from "./containers"
 import { CuteFace } from "./components"
-import { useStatus } from "./hooks"
 
 const SystemApp = () => {
   useStatus()
-  const status = useSelector(systemStatusSelector)
-  return status === StatusInterfaces.StatusEnum.ACTIVATE ? (
-    <System />
-  ) : (
-    <CuteFace />
-  )
+  const { system, enums } = useSystemContext()
+  return system.status === enums.status.ACTIVATE ? <System /> : <CuteFace />
 }
 
 export default SystemApp

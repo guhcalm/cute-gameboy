@@ -6,6 +6,7 @@ export interface UserInterface {
 }
 
 export enum PagesEnum {
+  STARTUP_SCREEN,
   BOOT_SCREEN,
   TITLE_SCREEN,
   LOGIN,
