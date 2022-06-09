@@ -19,14 +19,6 @@ export default styled.div`
     var(--terciary-on-light),
     var(--terciary)
   );
+  box-shadow: inset 0 0 10px 3px var(--terciary-on-dark);
   animation: ${light} 12s linear alternate infinite;
-  &::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    box-shadow: inset 0 0 10px 3px var(--terciary-on-dark);
-    position: absolute;
-    top: 0;
-  }
 `

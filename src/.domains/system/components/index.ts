@@ -1,1 +1,2 @@
-export { default as CuteFace } from "../components/CuteFace"
+export { default as CuteFace } from "./CuteFace"
+export { default as BootScreen } from "./BootScreen"

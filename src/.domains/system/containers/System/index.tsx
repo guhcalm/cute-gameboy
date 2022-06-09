@@ -1,3 +1,8 @@
+import { BootScreen } from "../../components"
 import Container from "./style"
 
-export default () => <Container />
+export default () => (
+  <Container>
+    <BootScreen />
+  </Container>
+)

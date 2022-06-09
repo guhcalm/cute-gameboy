@@ -2,7 +2,7 @@ import { StatusInterfaces, SystemInterfaces } from "../../../../../interfaces"
 const { ACTIVATE, INACTIVATE } = StatusInterfaces.StatusEnum
 
 export default {
-  status: INACTIVATE,
+  status: ACTIVATE,
   keypad: {
     startupSwitcher: INACTIVATE,
     directionalPad: {
