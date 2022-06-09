@@ -30,8 +30,9 @@ export const Background = styled.div`
   top: 0;
   left: 0;
   div {
-    width: 200px;
-    height: 200px;
+    --dimension: ${window.innerWidth * 0.6}px;
+    width: var(--dimension);
+    height: var(--dimension);
     position: absolute;
     transform: translate(-50%, -50%);
     border-radius: 50%;

@@ -6,7 +6,7 @@ import { CuteFace } from "./components"
 import { useStatus } from "./hooks"
 
 const SystemApp = () => {
-  //useStatus()
+  useStatus()
   const status = useSelector(systemStatusSelector)
   return status === StatusInterfaces.StatusEnum.ACTIVATE ? (
     <System />

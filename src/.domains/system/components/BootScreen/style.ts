@@ -39,4 +39,5 @@ export const Logo = styled.span`
   transform: translate(-50%, -50%);
   animation: ${wakeUp} 4s linear;
   animation-delay: 2s;
+  font-weight: 900;
 `
