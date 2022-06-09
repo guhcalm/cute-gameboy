@@ -15,6 +15,13 @@ export default createSlice({
   name: "system",
   initialState,
   reducers: {
+    // PAGES
+    setCurrentPage(
+      state: SystemInterfaces.SystemInterface,
+      { payload: current }: { payload: SystemInterfaces.PagesEnum }
+    ) {
+      state.pages.current = current
+    },
     // STATUS
     activateStatus(state: SystemInterfaces.SystemInterface) {
       state.status = StatusInterfaces.StatusEnum.ACTIVATE

@@ -3,6 +3,7 @@ const { ACTIVATE, INACTIVATE } = StatusInterfaces.StatusEnum
 
 export default {
   status: ACTIVATE,
+  pages: { current: SystemInterfaces.PagesEnum.BOOT_SCREEN },
   keypad: {
     startupSwitcher: INACTIVATE,
     directionalPad: {

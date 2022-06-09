@@ -1,12 +1,13 @@
 import styled, { keyframes } from "styled-components"
 
 export default styled.div`
+  z-index: 2;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
-  visibility: hidden;
   overflow: hidden;
+  visibility: hidden;
 `
 
 const wakeUp = keyframes`

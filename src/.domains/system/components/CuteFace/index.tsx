@@ -45,7 +45,7 @@ export default () => {
         return newPos
       })
     }
-  }, [x, y])
+  }, [pos])
 
   return (
     <Container>

@@ -13,11 +13,6 @@ const light = keyframes`
   100% { background-position: 0% 0% }
 `
 
-const bright = keyframes`
-  0% { box-shadow: inset 0 0 0px .3px var(--primary-on-light), inset 0 0 10px 3px var(--primary-on-dark), 0 0 2px var(--primary-on-light); }
-  100% { box-shadow: inset 0 0 0px .5px var(--primary-on-light), inset 0 0 10px 3px var(--primary-on-dark), 0 0 5px var(--primary-on-light); }
-`
-
 export default styled.div`
   position: relative;
   height: 100%;
@@ -42,6 +37,7 @@ export default styled.div`
     animation: ${light} 12s linear alternate infinite;
   }
   &::after {
-    animation: ${bright} 2s ease-out alternate infinite;
+    box-shadow: inset 0 0 10px 3px var(--primary-on-dark);
+    z-index: 100;
   }
 `
