@@ -1,5 +1,5 @@
 import { StatusInterfaces, SystemInterfaces } from "../../../../../interfaces"
-const { ACTIVATE, INACTIVATE } = StatusInterfaces.StatusEnum
+const { INACTIVATE } = StatusInterfaces.StatusEnum
 
 export default {
   status: INACTIVATE,

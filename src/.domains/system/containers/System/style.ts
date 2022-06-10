@@ -38,6 +38,5 @@ export default styled.div`
   }
   &::after {
     box-shadow: inset 0 0 10px 3px var(--primary-on-dark);
-    z-index: 100;
   }
 `
