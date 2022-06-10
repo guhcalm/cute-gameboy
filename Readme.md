@@ -1,6 +1,6 @@
 ## Pages
 
-https://guhcalm.github.io/cute-gameboy/dist
+https://guhcalm.github.io/cute-gameboy-in-react/dist
 
 ## Folder Structure
 
